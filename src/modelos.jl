@@ -11,7 +11,7 @@ state_kuka = MechanismState(mecanismo_kuka)
 """
 Robô serial com 2 graus de liberdade na vertical
 """
-function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, r1::Y , r2::Y) where {T<:AbstractMatrix, Y<: AbstractFloat}
+function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) where {T<:AbstractMatrix, Y<: AbstractFloat}
 
     function myrobot(du, u, p, t)
         m = SVector{2}([23.902, 1.285])
@@ -46,7 +46,6 @@ function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, r1::Y , r2::Y) where {T<
         g1 = (m[1] * r[1] + m[2] * l[1]) * g * cos1 + g2
         G = SVector{2}([g1; g2])
 
-        xr = SVector{2}([r1, r2])
         e = xr - θ
         tau = kp*e - kv*dθ
         du[1:2] = dθ
@@ -63,19 +62,18 @@ end
 """
 Robô kuka com 7 graus de liberdade na vertical
 """
-function kukaRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, r1::Y , r2::Y, r3::Y, r4::Y, r5::Y, r6::Y, r7::Y) where {T<:AbstractMatrix, Y<: AbstractFloat}
+function kukaRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) where {T<:AbstractMatrix, Y<: AbstractFloat}
     function myrobot(du, u, p, t)
         θ = SVector{7}(u[1:7])
-        dθ = SVector{7}(u[(8):end])
+        dθ = SVector{7}(u[8:end])
         set_configuration!(state_kuka,θ)
         set_velocity!(state_kuka,dθ)
         h = SVector{7}(dynamics_bias(state_kuka))
         m = SMatrix{7,7}(mass_matrix(state_kuka))
-        r = SVector{7}([r1, r2, r3, r4, r5, r6, r7])
-        e = r - θ
+        e = xr - θ
         tau = kp*e - kv*dθ
-        du[1:size] = dθ
-        du[(size+1):end] = inv(m)*(tau - h)
+        du[1:7] = dθ
+        du[8:end] = inv(m)*(tau - h)
     end
 
     tspan = (t0,tend)
@@ -89,7 +87,7 @@ end
 """
 Robô de estrutura paralela cadeia fechada na horizontal
 """
-function parallelRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, r1::Y , r2::Y) where {T<:AbstractMatrix, Y<: AbstractFloat}
+function parallelRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) where {T<:AbstractMatrix, Y<: AbstractFloat}
 
     function myrobot(du, u, p, t)
         #Entradas ativas
@@ -152,8 +150,8 @@ function parallelRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, r1::Y , r2::Y) where
 
 
         θ = SVector{2}([q11, q21])
+
         dθ = SVector{2}([dq11, dq21])
-        xr = SVector{2}([r1, r2])
         e = xr - θ
         tau = kp*e - kv*dθ
         du[1:2] = dθ
@@ -163,7 +161,6 @@ function parallelRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, r1::Y , r2::Y) where
     tspan = (t0,tend)
     prob2 = ODEProblem(myrobot,[0., 0., 0., 0.], tspan)
     sol2 = solve(prob2, Tsit5(), saveat = Ts, maxiters = 1e7, force_dtmin=true,reltol=1e-2,abstol=1e-3)
-    #,reltol=1e-2,abstol=1e-3,force_dtmin=true
     organize(2,sol2)
 end
 
