@@ -1,0 +1,841 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{kuka\_otimo\_2}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    Otimização do kuka utilizando conhecimento prévio do PID
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}56}]:} \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{m}\PY{l+s}{.}\PY{l+s}{j}\PY{l+s}{l}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{.}\PY{l+s}{j}\PY{l+s}{l}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{using} \PY{n}{Evolutionary}\PY{p}{,} \PY{n}{Plots}\PY{p}{;}
+         \PY{n}{pyplot}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}57}]:} \PY{n}{Ts} \PY{o}{=} \PY{l+m+mf}{0.08}
+         \PY{n}{tend} \PY{o}{=} \PY{l+m+mf}{2.0}
+         \PY{n}{t0} \PY{o}{=} \PY{l+m+mf}{0.0}
+         \PY{n}{popul}  \PY{o}{=} \PY{l+m+mi}{50}   \PY{c}{\PYZsh{} população}
+         \PY{n}{iterac} \PY{o}{=} \PY{l+m+mi}{10} \PY{c}{\PYZsh{}iterações}
+         \PY{n}{xr} \PY{o}{=} \PY{n}{SVector}\PY{p}{\PYZob{}}\PY{l+m+mi}{7}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{1.}\PY{p}{,}\PY{l+m+mf}{1.}\PY{p}{,}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mf}{0.6}\PY{p}{,}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{l+m+mf}{1.2}\PY{p}{,}\PY{l+m+mf}{0.8}\PY{p}{]}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}58}]:} \PY{k}{function} \PY{n}{gerador}\PY{p}{(}\PY{n}{n}\PY{p}{)}
+             \PY{n}{rand}\PY{p}{(}\PY{n}{n}\PY{p}{)}\PY{o}{.*}\PY{p}{[}\PY{l+m+mf}{10000.}\PY{p}{,}\PY{l+m+mf}{10000.}\PY{p}{,}\PY{l+m+mf}{10000.}\PY{p}{,}\PY{l+m+mf}{10000.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mf}{10000.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{10.}\PY{p}{]}
+         \PY{k}{end}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}59}]:} \PY{k}{function} \PY{n}{custo}\PY{p}{(}\PY{n}{gain}\PY{o}{::}\PY{k+kt}{Vector}\PY{p}{\PYZob{}}\PY{k+kt}{Float64}\PY{p}{\PYZcb{}}\PY{p}{)}
+             \PY{n}{kp} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+             \PY{n}{kv} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{8}\PY{o}{:}\PY{k}{end}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+             \PY{n}{x}\PY{p}{,} \PY{n}{v}\PY{p}{,} \PY{n}{t}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{ta}\PY{p}{,} \PY{n}{j}\PY{p}{,} \PY{n}{tj} \PY{o}{=} \PY{n}{kukaRobot}\PY{p}{(}\PY{n}{kp}\PY{p}{,} \PY{n}{kv}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{tend}\PY{p}{,} \PY{n}{xr}\PY{p}{)}
+             \PY{n}{sizeVector} \PY{o}{=} \PY{n}{length}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+         
+             \PY{n}{erro\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
+             \PY{k}{for} \PY{n}{i}\PY{o}{=}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}
+                 \PY{n}{erro} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{n}{xr}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}
+                 \PY{n}{erro\PYZus{}sum} \PY{o}{=} \PY{n}{erro\PYZus{}sum} \PY{o}{+} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{erro}\PY{p}{[}\PY{n}{floor}\PY{p}{(}\PY{k+kt}{Integer}\PY{p}{,}\PY{n}{sizeVector}\PY{o}{/}\PY{l+m+mi}{3}\PY{p}{)}\PY{o}{:}\PY{k}{end}\PY{p}{]}\PY{p}{)}\PY{p}{)} 
+             \PY{k}{end}
+         
+             \PY{n}{jerk\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
+             \PY{k}{for} \PY{n}{i}\PY{o}{=}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}
+                 \PY{n}{jerk\PYZus{}sum} \PY{o}{=} \PY{n}{jerk\PYZus{}sum} \PY{o}{+} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{j}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+             \PY{k}{end}
+         
+             
+             \PY{n}{erro\PYZus{}sum} \PY{o}{=} \PY{n}{erro\PYZus{}sum} \PY{o}{*} \PY{l+m+mf}{10.}
+             \PY{n}{jerk\PYZus{}sum} \PY{o}{=} \PY{n}{jerk\PYZus{}sum} \PY{o}{*} \PY{l+m+mf}{0.01}
+         
+             \PY{n}{out} \PY{o}{=}  \PY{n}{erro\PYZus{}sum} \PY{o}{+} \PY{n}{jerk\PYZus{}sum}
+             \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{o}\PY{l+s}{:}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{erro\PYZus{}sum}\PY{p}{)}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{:}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{jerk\PYZus{}sum}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{out}
+         \PY{k}{end}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}60}]:} \PY{n}{N} \PY{o}{=} \PY{l+m+mi}{14}
+         \PY{n}{result}\PY{p}{,} \PY{n}{fitness}\PY{p}{,} \PY{n}{cnt} \PY{o}{=} \PY{n}{ga}\PY{p}{(}\PY{n}{custo}\PY{p}{,} \PY{n}{N}\PY{p}{;} \PY{n}{initPopulation} \PY{o}{=} \PY{n}{gerador}\PY{p}{,} \PY{n}{populationSize} \PY{o}{=} \PY{n}{popul}\PY{p}{,} \PY{n}{ɛ} \PY{o}{=} \PY{l+m+mf}{0.25}\PY{p}{,} \PY{n}{selection} \PY{o}{=} \PY{n}{roulette}\PY{p}{,} \PY{n}{crossover} \PY{o}{=} \PY{n}{intermediate}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{)}\PY{p}{,} \PY{n}{mutation} \PY{o}{=} \PY{n}{domainrange}\PY{p}{(}\PY{n}{fill}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{iterations} \PY{o}{=} \PY{n}{iterac}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 66.33155869034366 jerk: 239.78976437560243
+erro: 98.08988566736187 jerk: 56.729780430947244
+erro: 73.10188295362809 jerk: 53.74179850584136
+erro: 225.81027268887345 jerk: 39.85540366020051
+erro: 112.76574088522514 jerk: 22.164950164257366
+erro: 31.03181791694153 jerk: 47.27680453404186
+erro: 321.8955684857164 jerk: 13.75389419808604
+erro: 101.3307174198021 jerk: 59.54877675017
+erro: 121.66250406351865 jerk: 52.852396775986094
+erro: 80.38781983654968 jerk: 32.893039199933185
+erro: 71.98438067949552 jerk: 45.98325129663804
+erro: 207.4147074069276 jerk: 22.306050460788224
+erro: 131.4603366543497 jerk: 53.250607598737915
+erro: 172.19306678155235 jerk: 35.275930747216265
+erro: 25.500843625367406 jerk: 43.32332933484733
+erro: 227.43611618862911 jerk: 41.751706455670046
+erro: 196.5234066754418 jerk: 56.03720658614009
+erro: 66.23280624888535 jerk: 39.72392274146946
+erro: 175.99415283984743 jerk: 43.61253782094382
+erro: 70.53589298114859 jerk: 358.8950751192584
+erro: 170.17489272267568 jerk: 153.70249739606302
+erro: 151.30339012846014 jerk: 45.06863273261985
+erro: 277.2175823001524 jerk: 45.39358208621882
+erro: 3.9308468979055466 jerk: 83.06404476214595
+erro: 125.37643387785066 jerk: 42.571848575119304
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:   9\%|████                                     |  ETA: 0:31:24}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 25.500843625367406 jerk: 43.32332933484733
+erro: 25.500843625367406 jerk: 43.32332933484733
+erro: 61.451006236452265 jerk: 29.660012689548267
+erro: 190.91686312154468 jerk: 33.19609726606449
+erro: 31.03729968567937 jerk: 47.25538426141085
+erro: 38.56757009641194 jerk: 56.88065054981229
+erro: 30.605296715049647 jerk: 50.19160976283628
+erro: 21.024772096984524 jerk: 53.62766006745319
+erro: 31.03729968567937 jerk: 47.25538426141085
+erro: 31.03729968567937 jerk: 47.25538426141085
+erro: 93.00841284964878 jerk: 46.40311876694607
+erro: 1630.6149517122205 jerk: 25732.39843958034
+erro: 31.03729968567937 jerk: 47.25538426141085
+erro: 66.23280624888535 jerk: 39.72392274146946
+erro: 98.08988566736187 jerk: 56.729780430947244
+erro: 101.31189277227051 jerk: 59.549647539719274
+erro: 30.246708845855753 jerk: 50.9635817719552
+erro: 29.68504518611403 jerk: 45.164258406828246
+erro: 54.74656077305306 jerk: 33.9115953882964
+erro: 35.230547402964014 jerk: 34.92380300620657
+erro: 31.03729968567937 jerk: 47.25538426141085
+erro: 80.38781983654968 jerk: 32.893039199933185
+erro: 25.500843625367406 jerk: 43.32332933484733
+erro: 247.85391315954772 jerk: 16.736342673987174
+erro: 165.480049342668 jerk: 43.29462068039469
+erro: 25.500843625367406 jerk: 43.32332933484733
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  18\%|███████                                  |  ETA: 0:26:25}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 31.032277199928217 jerk: 47.30349254685197
+erro: 31.03729968567937 jerk: 47.25538426141085
+erro: 20.669684829371356 jerk: 57.24071781574328
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 2.534681788665037e8 jerk: 8.875958431103799e7
+erro: 42.00167642413894 jerk: 54.46379304437807
+erro: 38.47359031869585 jerk: 47.43823695797613
+erro: 38.252983135998186 jerk: 44.90900814429488
+erro: 47497.81812251163 jerk: 1.973845306571731e6
+erro: 48.612836606132426 jerk: 41.84620396015557
+erro: 37.51826259977359 jerk: 45.731775094596514
+erro: 51.79207603957502 jerk: 40.21374814605891
+erro: 29.68504518611403 jerk: 45.164258406828246
+erro: 25.500843625367406 jerk: 43.32332933484733
+erro: 25.500843625367406 jerk: 43.32332933484733
+erro: 10.217540093026853 jerk: 73.49193682544339
+erro: 30.278516952300883 jerk: 45.952568552089936
+erro: 34.51188496792562 jerk: 58.12657985362165
+erro: 21.024772096984524 jerk: 53.62766006745319
+erro: 54.74656077305306 jerk: 33.9115953882964
+erro: 21.20834726002942 jerk: 56.22679005389535
+erro: 27.145509852663885 jerk: 50.08582707372887
+erro: 25.501644843179882 jerk: 43.32664156495636
+erro: 21.996387908788574 jerk: 50.20075258554594
+erro: 23.72276061753963 jerk: 49.60564275012541
+erro: 22.335003315896106 jerk: 40.291040135777294
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  27\%|███████████                              |  ETA: 0:51:45}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 21.024772096984524 jerk: 53.62766006745319
+erro: 38.252983135998186 jerk: 44.90900814429488
+erro: 26.010256746763925 jerk: 48.798134960942754
+erro: 24.2907932580423 jerk: 54.28288101152469
+erro: 35.13274602589345 jerk: 44.5733270697876
+erro: 41.63801592938085 jerk: 49.30770802509586
+erro: 33.23061046530371 jerk: 46.273110525344556
+erro: 30.023521427825415 jerk: 58.00977986490007
+erro: 23.680846155165042 jerk: 51.20731929826758
+erro: 20.723996957918757 jerk: 60.133197459256415
+erro: 21.024772096984524 jerk: 53.62766006745319
+erro: 51.79207603957502 jerk: 40.21374814605891
+erro: 20.457873183878824 jerk: 59.07338908366441
+erro: 21.468763285641334 jerk: 59.96025195303767
+erro: 57.77595722335269 jerk: 37.41035082577937
+erro: 68.84241217103336 jerk: 42.66437326352493
+erro: 21.024772096984524 jerk: 53.62766006745319
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 30.821398197416077 jerk: 52.68089675507507
+erro: 24.944433974391707 jerk: 43.03757268145413
+erro: 21.211527786842737 jerk: 56.23402047236011
+erro: 25.500843625367406 jerk: 43.32332933484733
+erro: 25.147633567705718 jerk: 43.45224282963698
+erro: 50.82853356158536 jerk: 51.24160366047402
+erro: 28.916027066400503 jerk: 53.71829160686732
+erro: 22.335003315896106 jerk: 40.291040135777294
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  36\%|███████████████                          |  ETA: 0:38:07}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 57.929099171230014 jerk: 37.36801508887619
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 32.09525595318886 jerk: 37.232947989103636
+erro: 35.04091851744627 jerk: 42.388164990339256
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 21.024772096984524 jerk: 53.62766006745319
+erro: 27.555186268859405 jerk: 56.8383924581901
+erro: 28.227470231925626 jerk: 48.46585903647856
+erro: 23.82856742501509 jerk: 57.81034672521458
+erro: 24.944433974391707 jerk: 43.03757268145413
+erro: 23.4010627992431 jerk: 58.65967285456015
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 30.821398197416077 jerk: 52.68089675507507
+erro: 30.821398197416077 jerk: 52.68089675507507
+erro: 28.792736621043915 jerk: 46.99230730447991
+erro: 41.707133812720215 jerk: 45.23783587215295
+erro: 55.746306342713424 jerk: 42.640450016782815
+erro: 50.435187912128995 jerk: 45.280585177397604
+erro: 71.23974850111034 jerk: 40.32112803125755
+erro: 54.0372679968116 jerk: 42.79850713625979
+erro: 22.30442475792595 jerk: 42.1053516151885
+erro: 22.426835946107573 jerk: 40.80091870766266
+erro: 25.617642330362962 jerk: 51.249135806715586
+erro: 24.97927148524284 jerk: 54.496919236545025
+erro: 22.921563215701333 jerk: 58.42770979855344
+erro: 22.335003315896106 jerk: 40.291040135777294
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  45\%|███████████████████                      |  ETA: 0:29:15}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 23.177010015862937 jerk: 62.22956012557723
+erro: 21.370129678450397 jerk: 56.08850283482425
+erro: 24.73163377478137 jerk: 54.09808835370739
+erro: 25.343644108029885 jerk: 34.87614678570917
+erro: 22.046756426515472 jerk: 43.040717835364106
+erro: 24.193966170235043 jerk: 55.584301882622185
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 22.426835946107573 jerk: 40.80091870766266
+erro: 46.85572612807246 jerk: 50.49641553702619
+erro: 26.237888782498544 jerk: 50.26906367743465
+erro: 22.30442475792595 jerk: 42.1053516151885
+erro: 22.426835946107573 jerk: 40.80091870766266
+erro: 50.435187912128995 jerk: 45.280585177397604
+erro: 41.707133812720215 jerk: 45.23783587215295
+erro: 41.770102280603574 jerk: 35.881063538537305
+erro: 23519.818421567223 jerk: 2.792598806972105e6
+erro: 23.58864086482056 jerk: 50.96184217684246
+erro: 35.5209017165111 jerk: 51.67653228546802
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 22.86786441466476 jerk: 44.42609816294813
+erro: 37.40299862076458 jerk: 43.755452733334586
+erro: 43.584521416156655 jerk: 46.101267580119305
+erro: 30.25249180544922 jerk: 62.32767174715954
+erro: 22.921563215701333 jerk: 58.42770979855344
+erro: 71.23974850111034 jerk: 40.32112803125755
+erro: 25.343644108029885 jerk: 34.87614678570917
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  55\%|██████████████████████                   |  ETA: 0:22:45}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 22.149301323277637 jerk: 60.96520015091343
+erro: 24.529918909099038 jerk: 57.51875053461563
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 25.386195917106544 jerk: 34.850265937383995
+erro: 25.357316798662918 jerk: 63.73318561715183
+erro: 27.623875913802838 jerk: 54.14846533828981
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 24.73163377478137 jerk: 54.09808835370739
+erro: 32.44570157838681 jerk: 48.149214453457105
+erro: 25.722872551182434 jerk: 54.778855044140975
+erro: 38.66685352269861 jerk: 49.93713362628448
+erro: 39.85017718629251 jerk: 55.4494025252717
+erro: 22.024220051728868 jerk: 58.57591302610099
+erro: 20.98722581493191 jerk: 50.829488657332945
+erro: 43.584521416156655 jerk: 46.101267580119305
+erro: 46.85572612807246 jerk: 50.49641553702619
+erro: 19.594033742614855 jerk: 48.36628959687267
+erro: 19.626593458747422 jerk: 81.9934787229386
+erro: 38.92617697453221 jerk: 40.55886294091247
+erro: 25.343644108029885 jerk: 34.87614678570917
+erro: 25.46047177554254 jerk: 36.750847007644104
+erro: 26.107294299944858 jerk: 37.37718833148284
+erro: 23.487332930757706 jerk: 54.870450858403395
+erro: 34.35351917707791 jerk: 36.65336208417715
+erro: 25.39317842914944 jerk: 49.74168107492742
+erro: 25.343644108029885 jerk: 34.87614678570917
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  64\%|██████████████████████████               |  ETA: 0:17:04}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 25.60755588234029 jerk: 41.33913891212342
+erro: 33.614115019232116 jerk: 63.269794822355756
+erro: 28.274162817317716 jerk: 58.31849086256036
+erro: 29.562525671213393 jerk: 46.44608104165549
+erro: 24.432431448897546 jerk: 56.63442887846755
+erro: 22.274620541989112 jerk: 47.85011890195176
+erro: 21.039528637509672 jerk: 58.157150879389896
+erro: 38.66685352269861 jerk: 49.93713362628448
+erro: 23.487332930757706 jerk: 54.870450858403395
+erro: 27.912808800017434 jerk: 54.34358530619322
+erro: 26.517543153308722 jerk: 36.07155526022921
+erro: 34.22820302514151 jerk: 49.988771691355296
+erro: 1.9019700517704745e6 jerk: 1.296661592293184e8
+erro: 23.713060093352887 jerk: 36.97733019991973
+erro: 24.331704854720826 jerk: 50.42567647294518
+erro: 25.343644108029885 jerk: 34.87614678570917
+erro: 25.658114981237617 jerk: 36.67279990370561
+erro: 25.386195917106544 jerk: 34.850265937383995
+erro: 26.570829233576312 jerk: 52.39013988650134
+erro: 34.35351917707791 jerk: 36.65336208417715
+erro: 43.584521416156655 jerk: 46.101267580119305
+erro: 22.335003315896106 jerk: 40.291040135777294
+erro: 25.420368710526475 jerk: 53.92327089230122
+erro: 24.928769509667323 jerk: 55.78706486602948
+erro: 20.88582423859027 jerk: 35.61785634464529
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  73\%|██████████████████████████████           |  ETA: 0:15:17}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 28.274162817317716 jerk: 58.31849086256036
+erro: 29.562525671213393 jerk: 46.44608104165549
+erro: 834.963078770892 jerk: 10183.784310592386
+erro: 24.63856061916692 jerk: 61.34989067478327
+erro: 22.27476569922997 jerk: 47.795001857585724
+erro: 24.928769509667323 jerk: 55.78706486602948
+erro: 25.048739061593643 jerk: 36.49545003900005
+erro: 25.254040774763524 jerk: 37.30225387971106
+erro: 33.90068271548884 jerk: 48.68429563346828
+erro: 29.08106608311538 jerk: 36.81759653793408
+erro: 23.713201188470727 jerk: 36.977050635932436
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 36.63214393662989 jerk: 41.574923683976124
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 24.81363958453329 jerk: 52.95388818845981
+erro: 21.95575220363157 jerk: 55.457369483829936
+erro: 36.99708484459157 jerk: 53.03850830115387
+erro: 25.343644108029885 jerk: 34.87614678570917
+erro: 25.658114981237617 jerk: 36.67279990370561
+erro: 34.35351917707791 jerk: 36.65336208417715
+erro: 34.35351917707791 jerk: 36.65336208417715
+erro: 26.517543153308722 jerk: 36.07155526022921
+erro: 21.039528637509672 jerk: 58.157150879389896
+erro: 21.42178210026848 jerk: 62.90874690655417
+erro: 24.060516891148005 jerk: 56.82224402328679
+erro: 20.88582423859027 jerk: 35.61785634464529
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  82\%|██████████████████████████████████       |  ETA: 0:09:38}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 29.670990710857264 jerk: 47.10426714284575
+erro: 27.171723333169908 jerk: 49.63438453835758
+erro: 24.46972453565712 jerk: 60.302746806354435
+erro: 20.730303286397813 jerk: 47.064046805904844
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 33.90068271548884 jerk: 48.68429563346828
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 41.81420003248837 jerk: 43.378939355909885
+erro: 23.498761241061608 jerk: 38.09539742636424
+erro: 23.398633736220336 jerk: 41.232216750495546
+erro: 27.159502261973326 jerk: 47.38533714622769
+erro: 29.13736019342844 jerk: 47.138216993886324
+erro: 24.34158037782447 jerk: 52.12549592056259
+erro: 28.82967755802795 jerk: 46.645142295642
+erro: 27.59191061735764 jerk: 65.91625514612758
+erro: 25.3763974701575 jerk: 65.35196126069467
+erro: 26.856291402669488 jerk: 52.75161682119354
+erro: 28.459818214340782 jerk: 52.74643163512766
+erro: 22.28858852865454 jerk: 39.364146311154066
+erro: 23.87401338812279 jerk: 61.33668822836236
+erro: 23.578516556886253 jerk: 60.92002511798667
+erro: 9887.868824731991 jerk: 961821.8100089764
+erro: 40.4385182468792 jerk: 48.99362956415676
+erro: 35.57380594888386 jerk: 47.87219601261638
+erro: 29.278878873240085 jerk: 49.0906041670735
+erro: 20.88582423859027 jerk: 35.61785634464529
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress:  91\%|█████████████████████████████████████    |  ETA: 0:04:37}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro: 25.238837859190838 jerk: 42.52046414758702
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 24.192445516429405 jerk: 57.32332217624677
+erro: 35.57965274076254 jerk: 47.33210885193823
+erro: 26.413847811687354 jerk: 48.91514778866034
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 20.88582423859027 jerk: 35.61785634464529
+erro: 23.398633736220336 jerk: 41.232216750495546
+erro: 21.69446301774995 jerk: 42.166288581175266
+erro: 22.68760778924076 jerk: 36.138153530821846
+erro: 3200.018311718207 jerk: 614650.2330415085
+erro: 30.091621439096244 jerk: 53.67679879125324
+erro: 32.78992447392675 jerk: 41.92149469722459
+erro: 32.63094551053224 jerk: 54.7138930735065
+erro: 23.142729274098826 jerk: 40.100229482900495
+erro: 24.405940501514046 jerk: 34.566698681200776
+erro: 25.404811862676056 jerk: 52.05043879993605
+erro: 26.299892058725028 jerk: 47.84528782225544
+erro: 23.719481694689875 jerk: 56.41789953333279
+erro: 22.0803133407978 jerk: 60.46795170962313
+erro: 25.579451506602343 jerk: 59.66553948701231
+erro: 26.106856984007422 jerk: 57.42722667672378
+erro: 30.020470124914553 jerk: 49.30930678063311
+erro: 29.670990710857264 jerk: 47.10426714284575
+erro: 29.670990710857264 jerk: 47.10426714284575
+erro: 20.88582423859027 jerk: 35.61785634464529
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\textcolor{ansi-green}{Progress: 100\%|█████████████████████████████████████████| Time: 0:48:54}
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}61}]:} \PY{n}{t\PYZus{}end\PYZus{}new} \PY{o}{=} \PY{n}{tend}
+         \PY{n}{kp} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n}{kv} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{7}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{8}\PY{o}{:}\PY{k}{end}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         
+         \PY{n}{x}\PY{p}{,} \PY{n}{v}\PY{p}{,} \PY{n}{t}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{ta}\PY{p}{,} \PY{n}{j}\PY{p}{,} \PY{n}{tj} \PY{o}{=} \PY{n}{kukaRobot}\PY{p}{(}\PY{n}{kp}\PY{p}{,} \PY{n}{kv}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{t\PYZus{}end\PYZus{}new}\PY{p}{,} \PY{n}{xr}\PY{p}{)}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}62}]:} \PY{k}{for} \PY{n}{i}\PY{o}{=}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}
+             \PY{n}{erro} \PY{o}{=} \PY{n}{xr}\PY{p}{[}\PY{n}{i}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{x}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{[}\PY{k}{end}\PY{p}{]}
+             \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{f}\PY{l+s}{i}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{l+s}{ }\PY{l+s}{=}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{erro}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+erro final 1 = 0.0005906653921418092
+erro final 2 = -0.00428228899049099
+erro final 3 = -0.0005478132060371399
+erro final 4 = 0.001635399548539751
+erro final 5 = 0.011836976686002587
+erro final 6 = -0.002106747831435385
+erro final 7 = 0.0001479618496730284
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}72}]:} \PY{k}{function} \PY{n}{plotx}\PY{p}{(}\PY{n}{i}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{s}\PY{l+s}{e}\PY{l+s}{j}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p1}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+         \PY{k}{end}    
+         \PY{k}{function} \PY{n}{plotx}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p1}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p3} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{3}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p3}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{3}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p4} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{4}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p4}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{4}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p5} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{5}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p5}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{l+m+mi}{5}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{5}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p6} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{6}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p6}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{l+m+mi}{6}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{6}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p7} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{7}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p7}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{xr}\PY{p}{[}\PY{l+m+mi}{7}\PY{p}{]}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{7}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,}\PY{n}{p3}\PY{p}{,}\PY{n}{p4}\PY{p}{,}\PY{n}{p5}\PY{p}{,}\PY{n}{p6}\PY{p}{,}\PY{n}{p7}\PY{p}{,} \PY{n}{layout} \PY{o}{=}\PY{p}{(}\PY{l+m+mi}{7}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}73}]:} \PY{n}{plotx}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+\texttt{\color{outcolor}Out[{\color{outcolor}73}]:}
+    
+    \begin{center}
+    \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_9_0.png}
+    \end{center}
+    { \hspace*{\fill} \\}
+    
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}79}]:} \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{S}\PY{l+s}{o}\PY{l+s}{m}\PY{l+s}{a}\PY{l+s}{t}\PY{l+s}{ó}\PY{l+s}{r}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{d}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{m}\PY{l+s}{ó}\PY{l+s}{d}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{d}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{for} \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}
+             \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZgt{}}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{j}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}
+         \PY{n}{soma\PYZus{}jerk}\PY{o}{=} \PY{l+m+mf}{0.}
+         \PY{k}{for} \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}
+             \PY{n}{soma\PYZus{}jerk} \PY{o}{+=} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{j}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{k}{end}
+         \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{j}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{o}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{:}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{soma\PYZus{}jerk}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Somatório do módulo do jerk
+junta 1 -> 638.5471019803335
+junta 2 -> 1091.4276796517734
+junta 3 -> 106.08612291577205
+junta 4 -> 883.7998461779902
+junta 5 -> 163.3607046783051
+junta 6 -> 74.27755937203386
+junta 7 -> 604.2866196883213
+jerk total: 3561.785634464529
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}80}]:} \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{M}\PY{l+s}{á}\PY{l+s}{x}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{m}\PY{l+s}{ó}\PY{l+s}{d}\PY{l+s}{u}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{d}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{for} \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}
+             \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{i}\PY{p}{)}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZgt{}}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{maximum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{j}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end} 
+         \PY{n}{soma\PYZus{}jerk\PYZus{}max} \PY{o}{=} \PY{l+m+mf}{0.}
+         \PY{k}{for} \PY{n}{i} \PY{o}{=} \PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{7}
+             \PY{n}{soma\PYZus{}jerk\PYZus{}max} \PY{o}{+=} \PY{n}{maximum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{j}\PY{p}{[}\PY{n}{i}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{k}{end}
+         \PY{n}{println}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{j}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{m}\PY{l+s}{á}\PY{l+s}{x}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{o}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{:}\PY{l+s}{ }\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{soma\PYZus{}jerk\PYZus{}max}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Máximo módulo do jerk
+junta 1 -> 532.1749232942382
+junta 2 -> 849.589553332606
+junta 3 -> 69.3197425500541
+junta 4 -> 648.201810552396
+junta 5 -> 143.36242855958778
+junta 6 -> 49.93778977570984
+junta 7 -> 492.7692498391387
+jerk máximo total: 2785.355497903731
+
+    \end{Verbatim}
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
