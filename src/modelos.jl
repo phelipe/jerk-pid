@@ -50,10 +50,11 @@ function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) wher
         tau = kp*e - kv*dθ
         du[1:2] = dθ
         du[3:4] = inv(M)*(tau - C * dθ - G)
+        du[5:6] = tau
     end
 
     tspan = (t0,tend)
-    prob2 = ODEProblem(myrobot,[0., 0., 0., 0.], tspan)
+    prob2 = ODEProblem(myrobot,[0., 0., 0., 0., 0., 0.], tspan)
     sol2 = solve(prob2, Tsit5(), saveat = Ts, maxiters = 1e7, force_dtmin=true,reltol=1e-2,abstol=1e-3)
     #,reltol=1e-2,abstol=1e-3,force_dtmin=true
     organize(2,sol2)
@@ -65,7 +66,7 @@ Robô kuka com 7 graus de liberdade na vertical
 function kukaRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) where {T<:AbstractMatrix, Y<: AbstractFloat}
     function myrobot(du, u, p, t)
         θ = SVector{7}(u[1:7])
-        dθ = SVector{7}(u[8:end])
+        dθ = SVector{7}(u[8:14])
         set_configuration!(state_kuka,θ)
         set_velocity!(state_kuka,dθ)
         h = SVector{7}(dynamics_bias(state_kuka))
@@ -73,11 +74,12 @@ function kukaRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) wher
         e = xr - θ
         tau = kp*e - kv*dθ
         du[1:7] = dθ
-        du[8:end] = inv(m)*(tau - h)
+        du[8:14] = inv(m)*(tau - h)
+        du[15:21] = tau
     end
 
     tspan = (t0,tend)
-    prob2 = ODEProblem(myrobot,[0., 0., 0., 0., 0., 0., 0., 0.,0., 0., 0., 0., 0., 0.], tspan)
+    prob2 = ODEProblem(myrobot, zeros(21), tspan)
     sol2 = solve(prob2, Tsit5(), saveat = Ts, maxiters = 1e7, force_dtmin=true,reltol=1e-2,abstol=1e-3)
     #,reltol=1e-2,abstol=1e-3,force_dtmin=true
     organize(7,sol2)
@@ -156,10 +158,10 @@ function parallelRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) 
         tau = kp*e - kv*dθ
         du[1:2] = dθ
         du[3:4] = inv(D)*(tau - C * dθ)
-
+        du[5:6] = tau
     end
     tspan = (t0,tend)
-    prob2 = ODEProblem(myrobot,[0., 0., 0., 0.], tspan)
+    prob2 = ODEProblem(myrobot,zeros(6), tspan)
     sol2 = solve(prob2, Tsit5(), saveat = Ts, maxiters = 1e7, force_dtmin=true,reltol=1e-2,abstol=1e-3)
     organize(2,sol2)
 end

@@ -2,11 +2,6 @@ function organize(mysize::Int, data)
     out_x = map(x -> x[1:mysize],data.u)
     out_dx = map(x -> x[(mysize+1):(2*mysize)],data.u)
     out_int_tau = map(x -> x[((2*mysize)+1):end],data.u)
-    println(length(out_x))
-    println(length(out_dx))
-    println(length(out_int_tau))
-
-    println("---")
     const T = diff(data.t)[1]
     #velocidade
     #Aqui estou fazendo uma aproximação da aceleração e do jerk
@@ -43,32 +38,43 @@ function organize(mysize::Int, data)
 end
 
 
-function tabela(dado::Vector{Vector{T}}, nome::String) where {T<:AbstractFloat}
+function tabela(dado::Vector, nome::String)
     size = length(dado)
+
     # título da tabela
     title = "---"
     for i = 1:size
         title*= "|junta $(i)"
     end
     title*= "\n"
+
     # barra separadora
     bar = "---"
     for i = 1:size
         bar*= "|---"
     end
     bar *= "\n"
+
     #valor máximo
     max = "**$(nome) máximo**"
     for i = 1:size
-        max*= "| $(maximum(abs.(dado[i]))) "
+        max*= "| $(round(maximum(abs.(dado[i])),2)) "
     end
     max *= "\n"
-        #valor total
+
+    #valor mínimo
+    min = "**$(nome) mínimo**"
+    for i = 1:size
+        min*= "| $(round(minimum(abs.(dado[i])),2)) "
+    end
+    min *= "\n"
+
+    #valor total
     total = "**$(nome) total**"
     for i = 1:size
-        total*= "| $(sum(abs.(dado[i]))) "
+        total*= "| $(round(sum(abs.(dado[i])),2)) "
     end
     total *= "\n"
-    Markdown.parse(title*bar*max*total)
+    Markdown.parse(title*bar*max*min*total)
 end
 tabela([[1.,2.,-3.],[10.,-21.,34.,12.]],"erro")
