@@ -287,28 +287,38 @@
 importo bibliotecas que serão utilizadas.
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}191}]:} \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{.}\PY{l+s}{.}\PY{l+s}{/}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{m}\PY{l+s}{.}\PY{l+s}{j}\PY{l+s}{l}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{.}\PY{l+s}{.}\PY{l+s}{/}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{.}\PY{l+s}{j}\PY{l+s}{l}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{using} \PY{n}{Evolutionary}\PY{p}{,} \PY{n}{Plots}\PY{p}{;}
-          \PY{n}{pyplot}\PY{p}{(}\PY{p}{)}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}1}]:} \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{.}\PY{l+s}{.}\PY{l+s}{/}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{m}\PY{l+s}{u}\PY{l+s}{m}\PY{l+s}{.}\PY{l+s}{j}\PY{l+s}{l}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+        \PY{n}{include}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{.}\PY{l+s}{.}\PY{l+s}{/}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{.}\PY{l+s}{j}\PY{l+s}{l}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+        \PY{k}{using} \PY{n}{Evolutionary}\PY{p}{,} \PY{n}{Plots}\PY{p}{;}
+        \PY{n}{pyplot}\PY{p}{(}\PY{p}{)}\PY{p}{;}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}192}]:} \PY{n}{Ts}     \PY{o}{=} \PY{l+m+mf}{0.05} \PY{c}{\PYZsh{} Intervalo entre leituras da saída}
-          \PY{n}{tend}   \PY{o}{=} \PY{l+m+mf}{2.0}  \PY{c}{\PYZsh{} tempo final para estabilização}
-          \PY{n}{t0}     \PY{o}{=} \PY{l+m+mf}{0.0}  \PY{c}{\PYZsh{} instante inicial}
-          \PY{n}{r1}     \PY{o}{=} \PY{l+m+mf}{0.6}  \PY{c}{\PYZsh{} referência junta 1}
-          \PY{n}{r2}     \PY{o}{=} \PY{l+m+mf}{0.8}  \PY{c}{\PYZsh{} referência junta 2}
-          \PY{n}{xr} \PY{o}{=} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}
-          \PY{n}{popul}  \PY{o}{=} \PY{l+m+mi}{50}   \PY{c}{\PYZsh{} população}
-          \PY{n}{iterac} \PY{o}{=} \PY{l+m+mi}{15}\PY{p}{;}   \PY{c}{\PYZsh{}iterações}
-          \PY{n}{α} \PY{o}{=} \PY{l+m+mf}{10.}       \PY{c}{\PYZsh{}parâmetro para o erro}
-          \PY{n}{β} \PY{o}{=} \PY{l+m+mf}{0.01}      \PY{c}{\PYZsh{}parâmetro para o jerk}
-          \PY{n+nb}{γ} \PY{o}{=} \PY{l+m+mf}{0.1}       \PY{c}{\PYZsh{}parâmetro para o torque}
-          \PY{n}{per} \PY{o}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2}     \PY{c}{\PYZsh{}inicio da leitura do vetor a parti de per do comprimento total}
-          \PY{n}{kp\PYZus{}end} \PY{o}{=} \PY{k+kt}{AbstractFloat}\PY{p}{[}\PY{p}{]}
-          \PY{n}{kv\PYZus{}end} \PY{o}{=} \PY{k+kt}{AbstractFloat}\PY{p}{[}\PY{p}{]}\PY{p}{;}
+\textcolor{ansi-cyan-intense}{\textbf{INFO: }}\textcolor{ansi-cyan}{Recompiling stale cache file /home/phelipe/.julia/lib/v0.6/QuadGK.ji for module QuadGK.
+}\textcolor{ansi-cyan-intense}{\textbf{INFO: }}\textcolor{ansi-cyan}{Recompiling stale cache file /home/phelipe/.julia/lib/v0.6/DiffEqParamEstim.ji for module DiffEqParamEstim.
+}\textcolor{ansi-cyan-intense}{\textbf{INFO: }}\textcolor{ansi-cyan}{Recompiling stale cache file /home/phelipe/.julia/lib/v0.6/DifferentialEquations.ji for module DifferentialEquations.
+}\textcolor{ansi-cyan-intense}{\textbf{INFO: }}\textcolor{ansi-cyan}{Recompiling stale cache file /home/phelipe/.julia/lib/v0.6/Plots.ji for module Plots.
+}\textcolor{ansi-cyan-intense}{\textbf{INFO: }}\textcolor{ansi-cyan}{Recompiling stale cache file /home/phelipe/.julia/lib/v0.6/Hiccup.ji for module Hiccup.
+}\textcolor{ansi-cyan-intense}{\textbf{INFO: }}\textcolor{ansi-cyan}{Recompiling stale cache file /home/phelipe/.julia/lib/v0.6/PyPlot.ji for module PyPlot.
+}
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{n}{Ts}     \PY{o}{=} \PY{l+m+mf}{0.05} \PY{c}{\PYZsh{} Intervalo entre leituras da saída}
+        \PY{n}{tend}   \PY{o}{=} \PY{l+m+mf}{2.0}  \PY{c}{\PYZsh{} tempo final para estabilização}
+        \PY{n}{t0}     \PY{o}{=} \PY{l+m+mf}{0.0}  \PY{c}{\PYZsh{} instante inicial}
+        \PY{n}{r1}     \PY{o}{=} \PY{l+m+mf}{0.6}  \PY{c}{\PYZsh{} referência junta 1}
+        \PY{n}{r2}     \PY{o}{=} \PY{l+m+mf}{0.8}  \PY{c}{\PYZsh{} referência junta 2}
+        \PY{n}{xr} \PY{o}{=} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}
+        \PY{n}{popul}  \PY{o}{=} \PY{l+m+mi}{50}   \PY{c}{\PYZsh{} população}
+        \PY{n}{iterac} \PY{o}{=} \PY{l+m+mi}{15}\PY{p}{;}   \PY{c}{\PYZsh{}iterações}
+        \PY{n}{α} \PY{o}{=} \PY{l+m+mf}{10.}       \PY{c}{\PYZsh{}parâmetro para o erro}
+        \PY{n}{β} \PY{o}{=} \PY{l+m+mf}{0.01}      \PY{c}{\PYZsh{}parâmetro para o jerk}
+        \PY{n+nb}{γ} \PY{o}{=} \PY{l+m+mf}{0.1}       \PY{c}{\PYZsh{}parâmetro para o torque}
+        \PY{n}{per} \PY{o}{=} \PY{l+m+mi}{1}\PY{o}{/}\PY{l+m+mi}{2}     \PY{c}{\PYZsh{}inicio da leitura do vetor a parti de per do comprimento total}
+        \PY{n}{kp\PYZus{}end} \PY{o}{=} \PY{k+kt}{AbstractFloat}\PY{p}{[}\PY{p}{]}
+        \PY{n}{kv\PYZus{}end} \PY{o}{=} \PY{k+kt}{AbstractFloat}\PY{p}{[}\PY{p}{]}\PY{p}{;}
 \end{Verbatim}
 
 
@@ -329,84 +339,75 @@ do algoritmo genético (valor este utilizado para obter uma saída mais
 rápida).
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}193}]:} \PY{k}{function} \PY{n}{gerador2}\PY{p}{(}\PY{n}{n}\PY{p}{)}
-              \PY{n}{n} \PY{o}{=} \PY{n}{n}\PY{o}{/}\PY{l+m+mi}{2}
-              \PY{n}{kp} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mi}{10000}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-              \PY{n}{kv} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-              \PY{n}{vcat}\PY{p}{(}\PY{n}{kp}\PY{p}{,}\PY{n}{kv}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}3}]:} \PY{k}{function} \PY{n}{gerador2}\PY{p}{(}\PY{n}{n}\PY{p}{)}
+            \PY{n}{n} \PY{o}{=} \PY{n}{n}\PY{o}{/}\PY{l+m+mi}{2}
+            \PY{n}{kp} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mi}{10000}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+            \PY{n}{kv} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+            \PY{n}{vcat}\PY{p}{(}\PY{n}{kp}\PY{p}{,}\PY{n}{kv}\PY{p}{)}
+        \PY{k}{end}\PY{p}{;}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}194}]:} \PY{k}{function} \PY{n}{generateCusto}\PY{p}{(}\PY{n}{junta}\PY{o}{::}\PY{k+kt}{Integer}\PY{p}{)}
-              \PY{n}{out} \PY{o}{=} \PY{k}{function} \PY{n}{custo}\PY{p}{(}\PY{n}{gain}\PY{o}{::}\PY{k+kt}{Vector}\PY{p}{\PYZob{}}\PY{k+kt}{Float64}\PY{p}{\PYZcb{}}\PY{p}{)}
-                  \PY{n}{kp} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-                  \PY{n}{kv} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-                  \PY{n}{x}\PY{p}{,} \PY{n}{v}\PY{p}{,} \PY{n}{t}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{ta}\PY{p}{,} \PY{n}{j}\PY{p}{,} \PY{n}{tj}\PY{p}{,} \PY{n}{τ}\PY{p}{,} \PY{n}{t\PYZus{}tau} \PY{o}{=} \PY{n}{robot2dof}\PY{p}{(}\PY{n}{kp}\PY{p}{,} \PY{n}{kv}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{tend}\PY{p}{,} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}\PY{p}{)}
-                  
-                  \PY{n}{sizeVector} \PY{o}{=} \PY{n}{length}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-          
-                  \PY{n}{erro\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
-                  \PY{n}{erro} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{n}{xr}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{p}{)}
-                  \PY{n}{erro\PYZus{}sum} \PY{o}{+=} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{erro}\PY{p}{[}\PY{n}{floor}\PY{p}{(}\PY{k+kt}{Integer}\PY{p}{,}\PY{n}{sizeVector}\PY{o}{*}\PY{n}{per}\PY{p}{)}\PY{o}{:}\PY{k}{end}\PY{p}{]}\PY{p}{)}\PY{p}{)} 
-          
-                  \PY{n}{jerk\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
-                  \PY{n}{jerk\PYZus{}sum} \PY{o}{+=} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{j}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-                  
-                  \PY{n}{torque\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
-                  \PY{n}{torque\PYZus{}sum} \PY{o}{+=} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{τ}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-                  
-                  
-                  \PY{n}{erro\PYZus{}sum} \PY{o}{=} \PY{n}{erro\PYZus{}sum} \PY{o}{*} \PY{n}{α}
-                  \PY{n}{jerk\PYZus{}sum} \PY{o}{=} \PY{n}{jerk\PYZus{}sum} \PY{o}{*} \PY{n}{β} 
-                  \PY{n}{torque\PYZus{}sum} \PY{o}{=} \PY{n}{torque\PYZus{}sum} \PY{o}{*} \PY{n+nb}{γ}
-                  \PY{c}{\PYZsh{}println(\PYZdq{} \PYZdl{}(erro\PYZus{}sum) | \PYZdl{}(jerk\PYZus{}sum) | \PYZdl{}(torque\PYZus{}sum)\PYZdq{})}
-                  \PY{n}{out} \PY{o}{=}  \PY{n}{erro\PYZus{}sum} \PY{o}{+} \PY{n}{jerk\PYZus{}sum} \PY{o}{+} \PY{n}{torque\PYZus{}sum}
-                  \PY{n}{out}
-              \PY{k}{end}
-          \PY{k}{end}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}4}]:} \PY{k}{function} \PY{n}{generateCusto}\PY{p}{(}\PY{n}{junta}\PY{o}{::}\PY{k+kt}{Integer}\PY{p}{)}
+            \PY{n}{out} \PY{o}{=} \PY{k}{function} \PY{n}{custo}\PY{p}{(}\PY{n}{gain}\PY{o}{::}\PY{k+kt}{Vector}\PY{p}{\PYZob{}}\PY{k+kt}{Float64}\PY{p}{\PYZcb{}}\PY{p}{)}
+                \PY{n}{kp} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                \PY{n}{kv} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,} \PY{n}{gain}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                \PY{n}{x}\PY{p}{,} \PY{n}{v}\PY{p}{,} \PY{n}{t}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{ta}\PY{p}{,} \PY{n}{j}\PY{p}{,} \PY{n}{tj}\PY{p}{,} \PY{n}{τ}\PY{p}{,} \PY{n}{t\PYZus{}tau} \PY{o}{=} \PY{n}{robot2dof}\PY{p}{(}\PY{n}{kp}\PY{p}{,} \PY{n}{kv}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{tend}\PY{p}{,} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}\PY{p}{)}
+                
+                \PY{n}{sizeVector} \PY{o}{=} \PY{n}{length}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+        
+                \PY{n}{erro\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
+                \PY{n}{erro} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{o}{\PYZhy{}}\PY{n}{xr}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{p}{)}
+                \PY{n}{erro\PYZus{}sum} \PY{o}{+=} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{erro}\PY{p}{[}\PY{n}{floor}\PY{p}{(}\PY{k+kt}{Integer}\PY{p}{,}\PY{n}{sizeVector}\PY{o}{*}\PY{n}{per}\PY{p}{)}\PY{o}{:}\PY{k}{end}\PY{p}{]}\PY{p}{)}\PY{p}{)} 
+        
+                \PY{n}{jerk\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
+                \PY{n}{jerk\PYZus{}sum} \PY{o}{+=} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{j}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                
+                \PY{n}{torque\PYZus{}sum} \PY{o}{=} \PY{l+m+mf}{0.}
+                \PY{n}{torque\PYZus{}sum} \PY{o}{+=} \PY{n}{sum}\PY{p}{(}\PY{n}{abs}\PY{o}{.}\PY{p}{(}\PY{n}{τ}\PY{p}{[}\PY{n}{junta}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+                
+                
+                \PY{n}{erro\PYZus{}sum} \PY{o}{=} \PY{n}{erro\PYZus{}sum} \PY{o}{*} \PY{n}{α}
+                \PY{n}{jerk\PYZus{}sum} \PY{o}{=} \PY{n}{jerk\PYZus{}sum} \PY{o}{*} \PY{n}{β} 
+                \PY{n}{torque\PYZus{}sum} \PY{o}{=} \PY{n}{torque\PYZus{}sum} \PY{o}{*} \PY{n+nb}{γ}
+                \PY{c}{\PYZsh{}println(\PYZdq{} \PYZdl{}(erro\PYZus{}sum) | \PYZdl{}(jerk\PYZus{}sum) | \PYZdl{}(torque\PYZus{}sum)\PYZdq{})}
+                \PY{n}{out} \PY{o}{=}  \PY{n}{erro\PYZus{}sum} \PY{o}{+} \PY{n}{jerk\PYZus{}sum} \PY{o}{+} \PY{n}{torque\PYZus{}sum}
+                \PY{n}{out}
+            \PY{k}{end}
+        \PY{k}{end}\PY{p}{;}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}195}]:} \PY{n}{N} \PY{o}{=} \PY{l+m+mi}{4}
-           \PY{n}{result}\PY{p}{,} \PY{n}{fitness}\PY{p}{,} \PY{n}{cnt} \PY{o}{=} \PY{n}{ga}\PY{p}{(}\PY{n}{generateCusto}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{n}{N}\PY{p}{;} \PY{n}{initPopulation} \PY{o}{=} \PY{n}{gerador2}\PY{p}{,} \PY{n}{populationSize} \PY{o}{=} \PY{n}{popul}\PY{p}{,} \PY{n}{ɛ} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{selection} \PY{o}{=} \PY{n}{roulette}\PY{p}{,} \PY{n}{crossover} \PY{o}{=} \PY{n}{intermediate}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{)}\PY{p}{,} \PY{n}{mutation} \PY{o}{=} \PY{n}{domainrange}\PY{p}{(}\PY{n}{fill}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{iterations} \PY{o}{=} \PY{n}{iterac}\PY{p}{,} \PY{n}{showBar} \PY{o}{=} \PY{k+kc}{true}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}5}]:} \PY{n}{N} \PY{o}{=} \PY{l+m+mi}{4}
+         \PY{n}{result}\PY{p}{,} \PY{n}{fitness}\PY{p}{,} \PY{n}{cnt} \PY{o}{=} \PY{n}{ga}\PY{p}{(}\PY{n}{generateCusto}\PY{p}{(}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,} \PY{n}{N}\PY{p}{;} \PY{n}{initPopulation} \PY{o}{=} \PY{n}{gerador2}\PY{p}{,} \PY{n}{populationSize} \PY{o}{=} \PY{n}{popul}\PY{p}{,} \PY{n}{ɛ} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{selection} \PY{o}{=} \PY{n}{roulette}\PY{p}{,} \PY{n}{crossover} \PY{o}{=} \PY{n}{intermediate}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{)}\PY{p}{,} \PY{n}{mutation} \PY{o}{=} \PY{n}{domainrange}\PY{p}{(}\PY{n}{fill}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{iterations} \PY{o}{=} \PY{n}{iterac}\PY{p}{,} \PY{n}{showBar} \PY{o}{=} \PY{k+kc}{true}\PY{p}{)}
 \end{Verbatim}
 
-
-    \begin{Verbatim}[commandchars=\\\{\}]
- Progress:|\textcolor{ansi-red}{█}\textcolor{ansi-white}{██████████████████████████████████████████████████}| 0.0\%
-    \end{Verbatim}
-
-    \begin{Verbatim}[commandchars=\\\{\}]
-\textcolor{ansi-yellow-intense}{\textbf{WARNING: }}\textcolor{ansi-yellow}{Interrupted. Larger maxiters is needed.}
-
-    \end{Verbatim}
 
     \begin{Verbatim}[commandchars=\\\{\}]
  Progress:|\textcolor{ansi-red}{███████████████████████████████████████████████████}| 100.0\%
     \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}195}]:} ([0.00330958, 7385.74, 0.128808, 52.4041], 4.465087312978853, 15, 0.0, Dict\{Symbol,Any\}())
+{\color{outcolor}Out[{\color{outcolor}5}]:} ([-0.0542029, 7933.52, 0.319774, 53.6495], 4.280257368935602, 15, 0.0822803255100455, Dict\{Symbol,Any\}())
 \end{Verbatim}
             
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}196}]:} \PY{n}{push!}\PY{p}{(}\PY{n}{kp\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
-          \PY{n}{push!}\PY{p}{(}\PY{n}{kv\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
-          \PY{n}{Markdown}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{P}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{V}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}6}]:} \PY{n}{push!}\PY{p}{(}\PY{n}{kp\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
+        \PY{n}{push!}\PY{p}{(}\PY{n}{kv\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
+        \PY{n}{Markdown}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{P}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{V}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}196}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}6}]:}
     
     \begin{longtable}[]{@{}rr@{}}
 \toprule
 --- & junta 2\tabularnewline
 \midrule
 \endhead
-\textbf{KP} & 7385.74\tabularnewline
-\textbf{KV} & 52.4\tabularnewline
+\textbf{KP} & 7933.52\tabularnewline
+\textbf{KV} & 53.65\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -416,20 +417,20 @@ rápida).
 \subsection{Otimização junta 1}\label{otimizauxe7uxe3o-junta-1}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}197}]:} \PY{k}{function} \PY{n}{gerador1}\PY{p}{(}\PY{n}{n}\PY{p}{)}
-              \PY{n}{n} \PY{o}{=} \PY{n}{n}\PY{o}{/}\PY{l+m+mi}{2}
-              \PY{n}{kp} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mi}{10000}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-              \PY{n}{push!}\PY{p}{(}\PY{n}{kp}\PY{p}{,}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
-              \PY{n}{kv} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-              \PY{n}{push!}\PY{p}{(}\PY{n}{kv}\PY{p}{,}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
-              \PY{n}{vcat}\PY{p}{(}\PY{n}{kp}\PY{p}{,}\PY{n}{kv}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}7}]:} \PY{k}{function} \PY{n}{gerador1}\PY{p}{(}\PY{n}{n}\PY{p}{)}
+            \PY{n}{n} \PY{o}{=} \PY{n}{n}\PY{o}{/}\PY{l+m+mi}{2}
+            \PY{n}{kp} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{,}\PY{l+m+mi}{10000}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+            \PY{n}{push!}\PY{p}{(}\PY{n}{kp}\PY{p}{,}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{)}
+            \PY{n}{kv} \PY{o}{=} \PY{n}{push!}\PY{p}{(}\PY{n}{zeros}\PY{p}{(}\PY{n}{n}\PY{o}{\PYZhy{}}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{,}\PY{n}{rand}\PY{p}{(}\PY{p}{)}\PY{o}{*}\PY{n}{rand}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{10.}\PY{p}{,}\PY{l+m+mf}{100.}\PY{p}{,}\PY{l+m+mf}{1000.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+            \PY{n}{push!}\PY{p}{(}\PY{n}{kv}\PY{p}{,}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{4}\PY{p}{]}\PY{p}{)}
+            \PY{n}{vcat}\PY{p}{(}\PY{n}{kp}\PY{p}{,}\PY{n}{kv}\PY{p}{)}
+        \PY{k}{end}\PY{p}{;}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}198}]:} \PY{n}{N} \PY{o}{=} \PY{l+m+mi}{4}
-           \PY{n}{result}\PY{p}{,} \PY{n}{fitness}\PY{p}{,} \PY{n}{cnt} \PY{o}{=} \PY{n}{ga}\PY{p}{(}\PY{n}{generateCusto}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{N}\PY{p}{;} \PY{n}{initPopulation} \PY{o}{=} \PY{n}{gerador1}\PY{p}{,} \PY{n}{populationSize} \PY{o}{=} \PY{n}{popul}\PY{p}{,} \PY{n}{ɛ} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{selection} \PY{o}{=} \PY{n}{roulette}\PY{p}{,} \PY{n}{crossover} \PY{o}{=} \PY{n}{intermediate}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{)}\PY{p}{,} \PY{n}{mutation} \PY{o}{=} \PY{n}{domainrange}\PY{p}{(}\PY{n}{fill}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{iterations} \PY{o}{=} \PY{n}{iterac}\PY{p}{,} \PY{n}{showBar} \PY{o}{=} \PY{k+kc}{true}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}8}]:} \PY{n}{N} \PY{o}{=} \PY{l+m+mi}{4}
+         \PY{n}{result}\PY{p}{,} \PY{n}{fitness}\PY{p}{,} \PY{n}{cnt} \PY{o}{=} \PY{n}{ga}\PY{p}{(}\PY{n}{generateCusto}\PY{p}{(}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{,} \PY{n}{N}\PY{p}{;} \PY{n}{initPopulation} \PY{o}{=} \PY{n}{gerador1}\PY{p}{,} \PY{n}{populationSize} \PY{o}{=} \PY{n}{popul}\PY{p}{,} \PY{n}{ɛ} \PY{o}{=} \PY{l+m+mf}{0.1}\PY{p}{,} \PY{n}{selection} \PY{o}{=} \PY{n}{roulette}\PY{p}{,} \PY{n}{crossover} \PY{o}{=} \PY{n}{intermediate}\PY{p}{(}\PY{l+m+mf}{0.25}\PY{p}{)}\PY{p}{,} \PY{n}{mutation} \PY{o}{=} \PY{n}{domainrange}\PY{p}{(}\PY{n}{fill}\PY{p}{(}\PY{l+m+mf}{0.5}\PY{p}{,}\PY{n}{N}\PY{p}{)}\PY{p}{)}\PY{p}{,} \PY{n}{iterations} \PY{o}{=} \PY{n}{iterac}\PY{p}{,} \PY{n}{showBar} \PY{o}{=} \PY{k+kc}{true}\PY{p}{)}
 \end{Verbatim}
 
 
@@ -438,24 +439,24 @@ rápida).
     \end{Verbatim}
 
 \begin{Verbatim}[commandchars=\\\{\}]
-{\color{outcolor}Out[{\color{outcolor}198}]:} ([3857.18, 7385.74, 1085.07, 52.4041], 105.9823753467286, 15, 0.0, Dict\{Symbol,Any\}())
+{\color{outcolor}Out[{\color{outcolor}8}]:} ([3083.5, 7933.52, 794.635, 53.6462], 106.57655134800977, 15, 0.0, Dict\{Symbol,Any\}())
 \end{Verbatim}
             
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}199}]:} \PY{n}{push!}\PY{p}{(}\PY{n}{kp\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
-          \PY{n}{push!}\PY{p}{(}\PY{n}{kv\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{)}
-          \PY{n}{Markdown}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{P}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{V}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{push!}\PY{p}{(}\PY{n}{kp\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{)}
+        \PY{n}{push!}\PY{p}{(}\PY{n}{kv\PYZus{}end}\PY{p}{,} \PY{n}{result}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{)}
+        \PY{n}{Markdown}\PY{o}{.}\PY{n}{parse}\PY{p}{(}\PY{l+s}{\PYZdq{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{|}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s}{\PYZhy{}}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{P}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s+se}{\PYZbs{}n}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{K}\PY{l+s}{V}\PY{l+s}{*}\PY{l+s}{*}\PY{l+s}{|}\PY{l+s+si}{\PYZdl{}}\PY{p}{(}\PY{n}{round}\PY{p}{(}\PY{n}{result}\PY{p}{[}\PY{l+m+mi}{3}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{)}\PY{p}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}199}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}9}]:}
     
     \begin{longtable}[]{@{}rr@{}}
 \toprule
 --- & junta 1\tabularnewline
 \midrule
 \endhead
-\textbf{KP} & 3857.18\tabularnewline
-\textbf{KV} & 1085.07\tabularnewline
+\textbf{KP} & 3083.5\tabularnewline
+\textbf{KV} & 794.64\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -466,48 +467,48 @@ rápida).
 otimização}\label{resultado-da-otimizauxe7uxe3o}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}200}]:} \PY{n}{kp} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{flipdim}\PY{p}{(}\PY{n}{kp\PYZus{}end}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-          \PY{n}{kv} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{flipdim}\PY{p}{(}\PY{n}{kv\PYZus{}end}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)}
-          \PY{n}{x}\PY{p}{,} \PY{n}{v}\PY{p}{,} \PY{n}{t}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{ta}\PY{p}{,} \PY{n}{j}\PY{p}{,} \PY{n}{tj}\PY{p}{,} \PY{n}{τ}\PY{p}{,} \PY{n}{t\PYZus{}tau} \PY{o}{=} \PY{n}{robot2dof}\PY{p}{(}\PY{n}{kp}\PY{p}{,} \PY{n}{kv}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{tend}\PY{p}{,} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}\PY{p}{)}
-          \PY{k}{function} \PY{n}{plotx}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p1}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r1}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r2}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}
-          
-          \PY{k}{function} \PY{n}{plotj}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
-          
-          \PY{k}{function} \PY{n}{plotTau}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
-          
-          \PY{k}{function} \PY{n}{plotv}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
-          
-          \PY{k}{function} \PY{n}{plota}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{kp} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{flipdim}\PY{p}{(}\PY{n}{kp\PYZus{}end}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         \PY{n}{kv} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{n}{flipdim}\PY{p}{(}\PY{n}{kv\PYZus{}end}\PY{p}{[}\PY{l+m+mi}{1}\PY{o}{:}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+         \PY{n}{x}\PY{p}{,} \PY{n}{v}\PY{p}{,} \PY{n}{t}\PY{p}{,} \PY{n}{a}\PY{p}{,} \PY{n}{ta}\PY{p}{,} \PY{n}{j}\PY{p}{,} \PY{n}{tj}\PY{p}{,} \PY{n}{τ}\PY{p}{,} \PY{n}{t\PYZus{}tau} \PY{o}{=} \PY{n}{robot2dof}\PY{p}{(}\PY{n}{kp}\PY{p}{,} \PY{n}{kv}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{tend}\PY{p}{,} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}\PY{p}{)}
+         \PY{k}{function} \PY{n}{plotx}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p1}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r1}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r2}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}
+         
+         \PY{k}{function} \PY{n}{plotj}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
+         
+         \PY{k}{function} \PY{n}{plotTau}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
+         
+         \PY{k}{function} \PY{n}{plotv}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
+         
+         \PY{k}{function} \PY{n}{plota}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
 \end{Verbatim}
 
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}201}]:} \PY{n}{plotx}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{plotx}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}201}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}11}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_17_0.png}
@@ -516,10 +517,10 @@ otimização}\label{resultado-da-otimizauxe7uxe3o}}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}202}]:} \PY{n}{plotv}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{plotv}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}202}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}12}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_18_0.png}
@@ -528,10 +529,10 @@ otimização}\label{resultado-da-otimizauxe7uxe3o}}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}203}]:} \PY{n}{plota}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}13}]:} \PY{n}{plota}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}203}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}13}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_19_0.png}
@@ -540,10 +541,10 @@ otimização}\label{resultado-da-otimizauxe7uxe3o}}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}204}]:} \PY{n}{plotj}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{plotj}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}204}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}14}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_20_0.png}
@@ -552,10 +553,10 @@ otimização}\label{resultado-da-otimizauxe7uxe3o}}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}205}]:} \PY{n}{plotTau}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{plotTau}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}205}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}15}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_21_0.png}
@@ -567,36 +568,38 @@ otimização}\label{resultado-da-otimizauxe7uxe3o}}
 PID otimizado.}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}206}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}206}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}16}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
 --- & junta 1 & junta 2\tabularnewline
 \midrule
 \endhead
-\textbf{Jerk máximo} & 830.14 & 1.06\tabularnewline
-\textbf{Jerk total} & 947.38 & 13.22\tabularnewline
+\textbf{Jerk máximo} & 904.1 & 1.95\tabularnewline
+\textbf{Jerk mínimo} & 0.0 & 0.1\tabularnewline
+\textbf{Jerk total} & 1040.6 & 14.55\tabularnewline
 \bottomrule
 \end{longtable}
 
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}207}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}207}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}17}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
 --- & junta 1 & junta 2\tabularnewline
 \midrule
 \endhead
-\textbf{Torque máximo} & 93.71 & 5.0\tabularnewline
-\textbf{Torque total} & 940.11 & 8.61\tabularnewline
+\textbf{Torque máximo} & 98.75 & 5.33\tabularnewline
+\textbf{Torque mínimo} & 14.41 & 0.0\tabularnewline
+\textbf{Torque total} & 937.44 & 9.37\tabularnewline
 \bottomrule
 \end{longtable}
 
@@ -609,44 +612,44 @@ PID otimizado.}
 \subsection{Código}\label{cuxf3digo}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}208}]:} \PY{n}{kp\PYZus{}pid} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{2800.}\PY{p}{,} \PY{l+m+mf}{80.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-          \PY{n}{kv\PYZus{}pid} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{315.}\PY{p}{,} \PY{l+m+mf}{15.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
-          \PY{n}{x\PYZus{}pid}\PY{p}{,} \PY{n}{v\PYZus{}pid}\PY{p}{,} \PY{n}{t\PYZus{}pid}\PY{p}{,} \PY{n}{a\PYZus{}pid}\PY{p}{,} \PY{n}{ta\PYZus{}pid}\PY{p}{,} \PY{n}{j\PYZus{}pid}\PY{p}{,} \PY{n}{tj\PYZus{}pid}\PY{p}{,} \PY{n}{τ\PYZus{}pid}\PY{p}{,} \PY{n}{t\PYZus{}tau\PYZus{}pid} \PY{o}{=} \PY{n}{robot2dof}\PY{p}{(}\PY{n}{kp\PYZus{}pid}\PY{p}{,} \PY{n}{kv\PYZus{}pid}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{tend}\PY{p}{,} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}\PY{p}{)}
-          \PY{n}{erro1} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{r1}\PY{p}{)}
-          \PY{n}{erro2} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{r2}\PY{p}{)}
-          \PY{n}{erro} \PY{o}{=} \PY{p}{[}\PY{n}{erro1}\PY{p}{,} \PY{n}{erro2}\PY{p}{]}
-          
-          \PY{k}{function} \PY{n}{plotx\PYZus{}pd}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p1}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r1}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r2}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}
-          
-          \PY{k}{function} \PY{n}{plotj\PYZus{}pd}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj\PYZus{}pid}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj\PYZus{}pid}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
-          
-          \PY{k}{function} \PY{n}{plotTau\PYZus{}pd}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
-          
-          \PY{k}{function} \PY{n}{plotv\PYZus{}pid}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
-          
-          \PY{k}{function} \PY{n}{plota\PYZus{}pid}\PY{p}{(}\PY{p}{)}
-              \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta\PYZus{}pid}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta\PYZus{}pid}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-              \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{k}{end}\PY{p}{;}
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{kp\PYZus{}pid} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{2800.}\PY{p}{,} \PY{l+m+mf}{80.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n}{kv\PYZus{}pid} \PY{o}{=} \PY{n}{SMatrix}\PY{p}{\PYZob{}}\PY{l+m+mi}{2}\PY{p}{,}\PY{l+m+mi}{2}\PY{p}{\PYZcb{}}\PY{p}{(}\PY{n}{diagm}\PY{p}{(}\PY{p}{[}\PY{l+m+mf}{315.}\PY{p}{,} \PY{l+m+mf}{15.}\PY{p}{]}\PY{p}{)}\PY{p}{)}
+         \PY{n}{x\PYZus{}pid}\PY{p}{,} \PY{n}{v\PYZus{}pid}\PY{p}{,} \PY{n}{t\PYZus{}pid}\PY{p}{,} \PY{n}{a\PYZus{}pid}\PY{p}{,} \PY{n}{ta\PYZus{}pid}\PY{p}{,} \PY{n}{j\PYZus{}pid}\PY{p}{,} \PY{n}{tj\PYZus{}pid}\PY{p}{,} \PY{n}{τ\PYZus{}pid}\PY{p}{,} \PY{n}{t\PYZus{}tau\PYZus{}pid} \PY{o}{=} \PY{n}{robot2dof}\PY{p}{(}\PY{n}{kp\PYZus{}pid}\PY{p}{,} \PY{n}{kv\PYZus{}pid}\PY{p}{,} \PY{n}{Ts}\PY{p}{,} \PY{n}{t0}\PY{p}{,} \PY{n}{tend}\PY{p}{,} \PY{p}{[}\PY{n}{r1}\PY{p}{,} \PY{n}{r2}\PY{p}{]}\PY{p}{)}
+         \PY{n}{erro1} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{r1}\PY{p}{)}
+         \PY{n}{erro2} \PY{o}{=} \PY{o}{\PYZhy{}}\PY{p}{(}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]} \PY{o}{\PYZhy{}} \PY{n}{r2}\PY{p}{)}
+         \PY{n}{erro} \PY{o}{=} \PY{p}{[}\PY{n}{erro1}\PY{p}{,} \PY{n}{erro2}\PY{p}{]}
+         
+         \PY{k}{function} \PY{n}{plotx\PYZus{}pd}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p1}\PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r1}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r2}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}\PY{p}{;}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}
+         
+         \PY{k}{function} \PY{n}{plotj\PYZus{}pd}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj\PYZus{}pid}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{tj\PYZus{}pid}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
+         
+         \PY{k}{function} \PY{n}{plotTau\PYZus{}pd}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
+         
+         \PY{k}{function} \PY{n}{plotv\PYZus{}pid}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}pid}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
+         
+         \PY{k}{function} \PY{n}{plota\PYZus{}pid}\PY{p}{(}\PY{p}{)}
+             \PY{n}{p1} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta\PYZus{}pid}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{p2} \PY{o}{=} \PY{n}{plot}\PY{p}{(}\PY{n}{ta\PYZus{}pid}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{ylabel} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+             \PY{n}{plot}\PY{p}{(}\PY{n}{p1}\PY{p}{,}\PY{n}{p2}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{k}{end}\PY{p}{;}
 \end{Verbatim}
 
 
@@ -654,10 +657,10 @@ PID otimizado.}
 \subsection{Resultados PD}\label{resultados-pd}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}209}]:} \PY{n}{plotx\PYZus{}pd}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}19}]:} \PY{n}{plotx\PYZus{}pd}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}209}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}19}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_29_0.png}
@@ -666,10 +669,10 @@ PID otimizado.}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}210}]:} \PY{n}{plotv\PYZus{}pid}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{plotv\PYZus{}pid}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}210}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}20}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_30_0.png}
@@ -678,10 +681,10 @@ PID otimizado.}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}211}]:} \PY{n}{plota\PYZus{}pid}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{plota\PYZus{}pid}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}211}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}21}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_31_0.png}
@@ -690,10 +693,10 @@ PID otimizado.}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}212}]:} \PY{n}{plotj\PYZus{}pd}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{plotj\PYZus{}pd}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}212}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}22}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_32_0.png}
@@ -702,10 +705,10 @@ PID otimizado.}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}213}]:} \PY{n}{plotTau\PYZus{}pd}\PY{p}{(}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n}{plotTau\PYZus{}pd}\PY{p}{(}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}213}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}23}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_33_0.png}
@@ -717,10 +720,10 @@ PID otimizado.}
 PID clássico.}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}214}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j\PYZus{}pid}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j\PYZus{}pid}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}214}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}24}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
@@ -728,6 +731,7 @@ PID clássico.}
 \midrule
 \endhead
 \textbf{Jerk (PD) máximo} & 2034.53 & 1954.23\tabularnewline
+\textbf{Jerk (PD) mínimo} & 0.0 & 0.01\tabularnewline
 \textbf{Jerk (PD) total} & 2587.32 & 2361.25\tabularnewline
 \bottomrule
 \end{longtable}
@@ -735,10 +739,10 @@ PID clássico.}
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}215}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ\PYZus{}pid}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ\PYZus{}pid}\PY{p}{,}\PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}215}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}25}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
@@ -746,6 +750,7 @@ PID clássico.}
 \midrule
 \endhead
 \textbf{Torque (PD) máximo} & 175.93 & 17.22\tabularnewline
+\textbf{Torque (PD) mínimo} & 2.96 & 0.0\tabularnewline
 \textbf{Torque (PD) total} & 993.2 & 33.11\tabularnewline
 \bottomrule
 \end{longtable}
@@ -762,12 +767,12 @@ PID clássico.}
 \subsubsection{Posição junta 1}\label{posiuxe7uxe3o-junta-1}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}216}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r1}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r1}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}216}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}26}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_40_0.png}
@@ -779,12 +784,12 @@ PID clássico.}
 \subsubsection{Posição junta 2}\label{posiuxe7uxe3o-junta-2}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}217}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r2}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{x\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{p}{[}\PY{n}{r2}\PY{p}{]}\PY{p}{,}\PY{n}{seriestype}\PY{o}{=} \PY{o}{:}\PY{n}{hline}\PY{p}{,} \PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{r}\PY{l+s}{e}\PY{l+s}{f}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{ê}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{a}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}217}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}27}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_42_0.png}
@@ -799,11 +804,11 @@ PID clássico.}
 \subsubsection{Jerk junta 1}\label{jerk-junta-1}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}218}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}28}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}218}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}28}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_45_0.png}
@@ -815,11 +820,11 @@ PID clássico.}
 \subsubsection{Jerk junta 2}\label{jerk-junta-2}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}219}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}29}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{tj}\PY{p}{,}\PY{n}{j\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{r}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{n}\PY{l+s}{c}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{³}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}219}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}29}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_47_0.png}
@@ -834,11 +839,11 @@ PID clássico.}
 \subsubsection{Torque junta 1}\label{torque-junta-1}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}220}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}30}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}220}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}30}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_50_0.png}
@@ -850,11 +855,11 @@ PID clássico.}
 \subsubsection{Torque junta 2}\label{torque-junta-2}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}221}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{t\PYZus{}tau\PYZus{}pid}\PY{p}{,}\PY{n}{τ\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{N}\PY{l+s}{m}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}221}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}31}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_52_0.png}
@@ -869,11 +874,11 @@ PID clássico.}
 \subsubsection{Velocidade junta 1}\label{velocidade-junta-1}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}222}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}32}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}222}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}32}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_55_0.png}
@@ -885,11 +890,11 @@ PID clássico.}
 \subsubsection{Velocidade junta 2}\label{velocidade-junta-2}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}223}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}33}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{t}\PY{p}{,}\PY{n}{v\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}223}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}33}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_57_0.png}
@@ -904,11 +909,11 @@ PID clássico.}
 \subsubsection{Aceleração junta 1}\label{acelerauxe7uxe3o-junta-1}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}224}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}34}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{1}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}224}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}34}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_60_0.png}
@@ -920,11 +925,11 @@ PID clássico.}
 \subsubsection{Aceleração junta 2}\label{acelerauxe7uxe3o-junta-2}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}225}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
-          \PY{n}{plot!}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}35}]:} \PY{n}{plot}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+         \PY{n}{plot!}\PY{p}{(}\PY{n}{ta}\PY{p}{,}\PY{n}{a\PYZus{}pid}\PY{p}{[}\PY{l+m+mi}{2}\PY{p}{]}\PY{p}{,}\PY{n}{label} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{P}\PY{l+s}{D}\PY{l+s}{ }\PY{l+s}{t}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{o}\PY{l+s}{n}\PY{l+s}{a}\PY{l+s}{l}\PY{l+s}{ }\PY{l+s}{\PYZhy{}}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{title} \PY{o}{=} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{j}\PY{l+s}{u}\PY{l+s}{n}\PY{l+s}{t}\PY{l+s}{a}\PY{l+s}{ }\PY{l+s}{2}\PY{l+s}{\PYZdq{}}\PY{p}{,} \PY{n}{xlabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{t}\PY{l+s}{e}\PY{l+s}{m}\PY{l+s}{p}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{s}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{,}\PY{n}{ylabel} \PY{o}{=}\PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{/}\PY{l+s}{s}\PY{l+s}{²}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}225}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}35}]:}
     
     \begin{center}
     \adjustimage{max size={0.9\linewidth}{0.9\paperheight}}{output_62_0.png}
@@ -939,28 +944,29 @@ PID clássico.}
 \subsection{Sobre o torque}\label{sobre-o-torque}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}226}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}36}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}226}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}36}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
 --- & junta 1 & junta 2\tabularnewline
 \midrule
 \endhead
-\textbf{Torque (ótimo) máximo} & 93.71 & 5.0\tabularnewline
-\textbf{Torque (ótimo) total} & 940.11 & 8.61\tabularnewline
+\textbf{Torque (ótimo) máximo} & 98.75 & 5.33\tabularnewline
+\textbf{Torque (ótimo) mínimo} & 14.41 & 0.0\tabularnewline
+\textbf{Torque (ótimo) total} & 937.44 & 9.37\tabularnewline
 \bottomrule
 \end{longtable}
 
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}227}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}37}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{τ\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{T}\PY{l+s}{o}\PY{l+s}{r}\PY{l+s}{q}\PY{l+s}{u}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}227}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}37}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
@@ -968,6 +974,7 @@ PID clássico.}
 \midrule
 \endhead
 \textbf{Torque (clássico) máximo} & 175.93 & 17.22\tabularnewline
+\textbf{Torque (clássico) mínimo} & 2.96 & 0.0\tabularnewline
 \textbf{Torque (clássico) total} & 993.2 & 33.11\tabularnewline
 \bottomrule
 \end{longtable}
@@ -978,28 +985,29 @@ PID clássico.}
 \subsection{Sobre o Jerk}\label{sobre-o-jerk}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}228}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}38}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}228}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}38}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
 --- & junta 1 & junta 2\tabularnewline
 \midrule
 \endhead
-\textbf{Jerk (ótimo) máximo} & 830.14 & 1.06\tabularnewline
-\textbf{Jerk (ótimo) total} & 947.38 & 13.22\tabularnewline
+\textbf{Jerk (ótimo) máximo} & 904.1 & 1.95\tabularnewline
+\textbf{Jerk (ótimo) mínimo} & 0.0 & 0.1\tabularnewline
+\textbf{Jerk (ótimo) total} & 1040.6 & 14.55\tabularnewline
 \bottomrule
 \end{longtable}
 
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}231}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}39}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{j\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{J}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{k}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}231}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}39}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
@@ -1007,6 +1015,7 @@ PID clássico.}
 \midrule
 \endhead
 \textbf{Jerk (clássico) máximo} & 2034.53 & 1954.23\tabularnewline
+\textbf{Jerk (clássico) mínimo} & 0.0 & 0.01\tabularnewline
 \textbf{Jerk (clássico) total} & 2587.32 & 2361.25\tabularnewline
 \bottomrule
 \end{longtable}
@@ -1017,28 +1026,29 @@ PID clássico.}
 \subsubsection{Sobre a aceleração}\label{sobre-a-acelerauxe7uxe3o}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}233}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{a}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}40}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{a}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}233}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}40}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
 --- & junta 1 & junta 2\tabularnewline
 \midrule
 \endhead
-\textbf{Aceleração (ótimo) máximo} & 35.67 & 0.03\tabularnewline
-\textbf{Aceleração (ótimo) total} & 71.3 & 0.47\tabularnewline
+\textbf{Aceleração (ótimo) máximo} & 38.39 & 0.06\tabularnewline
+\textbf{Aceleração (ótimo) mínimo} & 0.0 & 0.0\tabularnewline
+\textbf{Aceleração (ótimo) total} & 76.76 & 0.49\tabularnewline
 \bottomrule
 \end{longtable}
 
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}232}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{a\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}41}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{a\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{A}\PY{l+s}{c}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{e}\PY{l+s}{r}\PY{l+s}{a}\PY{l+s}{ç}\PY{l+s}{ã}\PY{l+s}{o}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}232}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}41}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
@@ -1046,6 +1056,7 @@ PID clássico.}
 \midrule
 \endhead
 \textbf{Aceleração (clássico) máximo} & 74.1 & 77.4\tabularnewline
+\textbf{Aceleração (clássico) mínimo} & 0.0 & 0.0\tabularnewline
 \textbf{Aceleração (clássico) total} & 148.22 & 154.83\tabularnewline
 \bottomrule
 \end{longtable}
@@ -1056,28 +1067,29 @@ PID clássico.}
 \subsubsection{Sobre a velocidade}\label{sobre-a-velocidade}}
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}236}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{v}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}42}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{v}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{ó}\PY{l+s}{t}\PY{l+s}{i}\PY{l+s}{m}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}236}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}42}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
 --- & junta 1 & junta 2\tabularnewline
 \midrule
 \endhead
-\textbf{Velocidade (ótimo) máximo} & 1.78 & 0.0\tabularnewline
-\textbf{Velocidade (ótimo) total} & 10.91 & 0.02\tabularnewline
+\textbf{Velocidade (ótimo) máximo} & 1.92 & 0.0\tabularnewline
+\textbf{Velocidade (ótimo) mínimo} & 0.0 & 0.0\tabularnewline
+\textbf{Velocidade (ótimo) total} & 10.82 & 0.02\tabularnewline
 \bottomrule
 \end{longtable}
 
     
 
     \begin{Verbatim}[commandchars=\\\{\}]
-{\color{incolor}In [{\color{incolor}237}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{v\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
+{\color{incolor}In [{\color{incolor}43}]:} \PY{n}{tabela}\PY{p}{(}\PY{n}{v\PYZus{}pid}\PY{p}{,} \PY{l+s}{\PYZdq{}}\PY{l+s}{V}\PY{l+s}{e}\PY{l+s}{l}\PY{l+s}{o}\PY{l+s}{c}\PY{l+s}{i}\PY{l+s}{d}\PY{l+s}{a}\PY{l+s}{d}\PY{l+s}{e}\PY{l+s}{ }\PY{l+s}{(}\PY{l+s}{c}\PY{l+s}{l}\PY{l+s}{á}\PY{l+s}{s}\PY{l+s}{s}\PY{l+s}{i}\PY{l+s}{c}\PY{l+s}{o}\PY{l+s}{)}\PY{l+s}{\PYZdq{}}\PY{p}{)}
 \end{Verbatim}
 
-\texttt{\color{outcolor}Out[{\color{outcolor}237}]:}
+\texttt{\color{outcolor}Out[{\color{outcolor}43}]:}
     
     \begin{longtable}[]{@{}rrr@{}}
 \toprule
@@ -1085,6 +1097,7 @@ PID clássico.}
 \midrule
 \endhead
 \textbf{Velocidade (clássico) máximo} & 3.7 & 3.87\tabularnewline
+\textbf{Velocidade (clássico) mínimo} & 0.0 & 0.0\tabularnewline
 \textbf{Velocidade (clássico) total} & 9.89 & 15.17\tabularnewline
 \bottomrule
 \end{longtable}
