@@ -73,6 +73,7 @@ function kukaRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::AbstractVector) wher
         m = SMatrix{7,7}(mass_matrix(state_kuka))
         e = xr - θ
         tau = kp*e - kv*dθ
+        tau = SVector{7}(tau)
         du[1:7] = dθ
         du[8:14] = inv(m)*(tau - h)
         du[15:21] = tau
