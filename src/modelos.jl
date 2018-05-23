@@ -64,7 +64,7 @@ end
 """
 Robô serial com 2 graus de liberdade na vertical com dados
 """
-function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::Vector{Function}, vr::Vector{Function}) where {T<:AbstractMatrix, Y<: AbstractFloat}
+function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::Vector{Z}, vr::Vector{Z}) where {T<:AbstractMatrix, Y<: AbstractFloat, Z<:Function}
 
     function myrobot(du, u, p, t)
         m = SVector{2}([23.902, 1.285])
@@ -143,7 +143,7 @@ end
 """
 Robô kuka com 7 graus de liberdade na vertical
 """
-function kukaRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::Vector{Function}, vr::Vector{Function}) where {T<:AbstractMatrix, Y<: AbstractFloat}
+function kukaRobot(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::Vector{Z}, vr::Vector{Z}) where {T<:AbstractMatrix, Y<: AbstractFloat, Z<:Function}
     function myrobot(du, u, p, t)
         θ = SVector{7}(u[1:7])
         dθ = SVector{7}(u[8:14])
