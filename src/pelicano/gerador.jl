@@ -1,8 +1,8 @@
 include("../comum.jl")
 include("../modelos.jl")
 using Plots
+Plots.scalefontsizes(1.)
 pyplot()
-
 
 Ts     = 0.05 # Intervalo entre leituras da saída
 tend   = 2.0  # tempo final para estabilização
@@ -29,6 +29,10 @@ kv = SMatrix{2,2}(diagm(ganhos[3:4]))
 x, v, t, a, ta, j, tj, τ, t_tau = robot2dof(kp, kv, Ts, t0, tend, xr, vr)
 erro1 = -(x[1] .- map(i->xr[1](i), t))
 erro2 = -(x[2] .- map(i->xr[2](i), t))
+erro1a = -(a[1] .- map(i->ar[1](i), ta))
+erro2a = -(a[2] .- map(i->ar[2](i), ta))
+erro1j = -(j[1] .- map(i->jr[1](i), tj))
+erro2j = -(j[2] .- map(i->jr[2](i), tj))
 erro = [erro1, erro2]
 
 #Dados PD
@@ -37,38 +41,41 @@ kv_pid = SMatrix{2,2}(diagm([415., 15.]))
 x_pid, v_pid, t_pid, a_pid, ta_pid, j_pid, tj_pid, τ_pid, t_tau_pid = robot2dof(kp_pid, kv_pid, Ts, t0, tend, xr,vr)
 erro1_pd = -(x_pid[1] .- map(i->xr[1](i), t_pid))
 erro2_pd = -(x_pid[2] .- map(i->xr[2](i), t_pid))
-
+erro1a_pd = -(a_pid[1] .- map(i->ar[1](i), ta_pid))
+erro2a_pd = -(a_pid[2] .- map(i->ar[2](i), ta_pid))
+erro1j_pd = -(j_pid[1] .- map(i->jr[1](i), tj_pid))
+erro2j_pd = -(j_pid[2] .- map(i->jr[2](i), tj_pid))
 
 function plotx(aux)
-    p1 = plot(t,x[aux], label = "OPTIMAL PD  - joint $(aux)",xlabel ="Time (s)", ylabel = "Position (rad)", line=(2,:dot))
-    p1 = plot!(t_pid,x_pid[aux], label ="CLASSICAL PD - joint $(aux)", line=(2,:dash) )
-    p1= plot!(t,map(i->xr[aux](i), t), label = "Desired",line=(2))
-    plot(p1, title = "Position $(aux)")
+    p1 = plot(t,x[aux], label = " MJ-OPD  - joint $(aux)",xlabel ="Time (s)", ylabel = "Position (rad)")
+    p1 = plot!(t_pid,x_pid[aux], label ="ZN-PD - joint $(aux)")
+    p1= plot!(t,map(i->xr[aux](i), t), label = "Desired")
+    plot(p1, title = "Position")
 end
 
 function plotj(aux)
-    p1 = plot(tj,j[aux], label = "OPTIMAL PD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Jerk (rad/s³)", line=(2,:dot))
-    p1 = plot!(tj_pid,j_pid[aux], label ="CLASSICAL PD - joint $(aux)", line=(2,:dash))
-    p1= plot!(t,map(i->jr[aux](i), t), label = "Desired",line=(2))
-    plot(p1,title = "Jerk $(aux)")
+    p1 = plot(tj,j[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Jerk (rad/s³)")
+    p1 = plot!(tj_pid,j_pid[aux], label ="ZN-PD - joint $(aux)")
+    p1= plot!(t,map(i->jr[aux](i), t), label = "Desired")
+    plot(p1,title = "Jerk")
 end;
 
 function plotTau(aux)
-    p1 = plot(t_tau,τ[aux], label = "OPTIMAL PD  - junta $(aux)", xlabel ="Time (s)", ylabel = "Torque (Nm)", line=(2,:dot))
-    p1 = plot!(t_tau_pid,τ_pid[aux], label ="CLASSICAL PD - joint $(aux)", line=(2,:dash))
-    plot(p1, title = "Torque $(aux)")
+    p1 = plot(t_tau,τ[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Torque (Nm)")
+    p1 = plot!(t_tau_pid,τ_pid[aux], label ="ZN-PD - joint $(aux)")
+    plot(p1, title = "Torque")
 end;
 
 function plotv(aux)
-    p1 = plot(t,v[aux], label = " OPTIMAL PD - junta $(aux)", xlabel ="Time (s)", ylabel = "Velocity (rad/s)", line=(2,:dot))
-    p1 = plot!(t_pid,v_pid[aux], label ="CLASSICAL PD - joint $(aux)", line=(2,:dash))
-    p1= plot!(t,map(i->vr[aux](i), t), label = "Desired",line=(2))
-    plot(p1, title = "Velocity $(aux)")
+    p1 = plot(t,v[aux], label = "  MJ-OPD - joint $(aux)", xlabel ="Time (s)", ylabel = "Velocity (rad/s)")
+    p1 = plot!(t_pid,v_pid[aux], label ="ZN-PD - joint $(aux)")
+    p1= plot!(t,map(i->vr[aux](i), t), label = "Desired")
+    plot(p1, title = "Velocity")
 end;
 
 function plota(aux)
-    p1 = plot(ta,a[aux], label = "OPTIMAL PD  - junta $(aux)", xlabel ="Time (s)", ylabel = "Acceleration (rad/s²)", line=(2,:dot))
-    p1 = plot!(ta_pid,a_pid[aux], label ="CLASSICAL PD - joint $(aux)", line=(2,:dash))
-    p1= plot!(t,map(i->ar[aux](i), t), label = "Desired",line=(2))
-    plot(p1, title = "Acceleration $(aux)")
+    p1 = plot(ta,a[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Acceleration (rad/s²)")
+    p1 = plot!(ta_pid,a_pid[aux], label ="ZN-PD - joint $(aux)")
+    p1= plot!(t,map(i->ar[aux](i), t), label = "Desired")
+    plot(p1, title = "Acceleration")
 end;
