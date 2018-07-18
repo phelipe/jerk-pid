@@ -52,32 +52,32 @@ function plotx(aux)
     p1 = plot(t,x[aux], label = " MJ-OPD  - joint $(aux)",xlabel ="Time (s)", ylabel = "Position (rad)", line=(2,:dot))
     p1 = plot!(t_pid,x_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
     p1= plot!(t,map(i->xr[aux](i), t), label = "Desired",line=(1))
-    plot(p1, title = "Position")
+    plot(p1)
 end
 
 function plotj(aux)
     p1 = plot(tj,j[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Jerk (rad/s³)",line=(2,:dot))
     p1 = plot!(tj_pid,j_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
     p1= plot!(t,map(i->jr[aux](i), t), label = "Desired",line=(1))
-    plot(p1,title = "Jerk")
+    plot(p1)
 end;
 
 function plotTau(aux)
     p1 = plot(t_tau,τ[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Torque (Nm)",line=(2,:dot))
     p1 = plot!(t_tau_pid,τ_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
-    plot(p1, title = "Torque")
+    plot(p1)
 end;
 
 function plotv(aux)
     p1 = plot(t,v[aux], label = "  MJ-OPD - joint $(aux)", xlabel ="Time (s)", ylabel = "Velocity (rad/s)",line=(2,:dot))
     p1 = plot!(t_pid,v_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
     p1= plot!(t,map(i->vr[aux](i), t), label = "Desired",line=(1))
-    plot(p1, title = "Velocity")
+    plot(p1)
 end;
 
 function plota(aux)
     p1 = plot(ta,a[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Acceleration (rad/s²)",line=(2,:dot))
     p1 = plot!(ta_pid,a_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
     p1= plot!(t,map(i->ar[aux](i), t), label = "Desired",line=(1))
-    plot(p1, title = "Acceleration")
+    plot(p1)
 end;
