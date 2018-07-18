@@ -1,8 +1,10 @@
 include("../comum.jl")
 include("../modelos.jl")
 using Plots
-Plots.scalefontsizes(1.)
+Plots.scalefontsizes(1.2)
 pyplot()
+#fnt = Plots.font("Helvetica", 10.0)
+#default(titlefont=fnt, guidefont=fnt, tickfont=fnt, legendfont=fnt)
 
 Ts     = 0.05 # Intervalo entre leituras da saída
 tend   = 2.0  # tempo final para estabilização
@@ -47,35 +49,35 @@ erro1j_pd = -(j_pid[1] .- map(i->jr[1](i), tj_pid))
 erro2j_pd = -(j_pid[2] .- map(i->jr[2](i), tj_pid))
 
 function plotx(aux)
-    p1 = plot(t,x[aux], label = " MJ-OPD  - joint $(aux)",xlabel ="Time (s)", ylabel = "Position (rad)")
-    p1 = plot!(t_pid,x_pid[aux], label ="ZN-PD - joint $(aux)")
-    p1= plot!(t,map(i->xr[aux](i), t), label = "Desired")
+    p1 = plot(t,x[aux], label = " MJ-OPD  - joint $(aux)",xlabel ="Time (s)", ylabel = "Position (rad)", line=(2,:dot))
+    p1 = plot!(t_pid,x_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
+    p1= plot!(t,map(i->xr[aux](i), t), label = "Desired",line=(1))
     plot(p1, title = "Position")
 end
 
 function plotj(aux)
-    p1 = plot(tj,j[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Jerk (rad/s³)")
-    p1 = plot!(tj_pid,j_pid[aux], label ="ZN-PD - joint $(aux)")
-    p1= plot!(t,map(i->jr[aux](i), t), label = "Desired")
+    p1 = plot(tj,j[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Jerk (rad/s³)",line=(2,:dot))
+    p1 = plot!(tj_pid,j_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
+    p1= plot!(t,map(i->jr[aux](i), t), label = "Desired",line=(1))
     plot(p1,title = "Jerk")
 end;
 
 function plotTau(aux)
-    p1 = plot(t_tau,τ[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Torque (Nm)")
-    p1 = plot!(t_tau_pid,τ_pid[aux], label ="ZN-PD - joint $(aux)")
+    p1 = plot(t_tau,τ[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Torque (Nm)",line=(2,:dot))
+    p1 = plot!(t_tau_pid,τ_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
     plot(p1, title = "Torque")
 end;
 
 function plotv(aux)
-    p1 = plot(t,v[aux], label = "  MJ-OPD - joint $(aux)", xlabel ="Time (s)", ylabel = "Velocity (rad/s)")
-    p1 = plot!(t_pid,v_pid[aux], label ="ZN-PD - joint $(aux)")
-    p1= plot!(t,map(i->vr[aux](i), t), label = "Desired")
+    p1 = plot(t,v[aux], label = "  MJ-OPD - joint $(aux)", xlabel ="Time (s)", ylabel = "Velocity (rad/s)",line=(2,:dot))
+    p1 = plot!(t_pid,v_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
+    p1= plot!(t,map(i->vr[aux](i), t), label = "Desired",line=(1))
     plot(p1, title = "Velocity")
 end;
 
 function plota(aux)
-    p1 = plot(ta,a[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Acceleration (rad/s²)")
-    p1 = plot!(ta_pid,a_pid[aux], label ="ZN-PD - joint $(aux)")
-    p1= plot!(t,map(i->ar[aux](i), t), label = "Desired")
+    p1 = plot(ta,a[aux], label = " MJ-OPD  - joint $(aux)", xlabel ="Time (s)", ylabel = "Acceleration (rad/s²)",line=(2,:dot))
+    p1 = plot!(ta_pid,a_pid[aux], label ="ZN-PD - joint $(aux)",line=(2,:dash))
+    p1= plot!(t,map(i->ar[aux](i), t), label = "Desired",line=(1))
     plot(p1, title = "Acceleration")
 end;
