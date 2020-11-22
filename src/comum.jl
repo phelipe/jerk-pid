@@ -2,7 +2,7 @@ function organize(mysize::Int, data)
     out_x = map(x -> x[1:mysize],data.u)
     out_dx = map(x -> x[(mysize+1):(2*mysize)],data.u)
     out_int_tau = map(x -> x[((2*mysize)+1):end],data.u)
-    const T = diff(data.t)[1]
+    T = diff(data.t)[1]
     #velocidade
     #Aqui estou fazendo uma aproximação da aceleração e do jerk
     #out_d2x = diff(out_dx)/Ts #aceleração
@@ -58,26 +58,26 @@ function tabela(dado::Vector, nome::String)
     #valor máximo
     max = "**$(nome) máximo**"
     for i = 1:size
-        max*= "| $(round(maximum(abs.(dado[i])),2)) "
+        max*= "| $(round(maximum(abs.(dado[i]));digits=2)) "
     end
     max *= "\n"
 
     #valor mínimo
     min = "**$(nome) mínimo**"
     for i = 1:size
-        min*= "| $(round(minimum(abs.(dado[i])),2)) "
+        min*= "| $(round(minimum(abs.(dado[i])); digits=2)) "
     end
     min *= "\n"
 
     #valor total
     total = "**$(nome) total**"
     for i = 1:size
-        total*= "| $(round(sum(abs.(dado[i])),2)) "
+        total*= "| $(round(sum(abs.(dado[i])), digits=2)) "
     end
     total *= "\n"
-    Markdown.parse(title*bar*max*min*total)
+   print(title*bar*max*min*total)
 end
-tabela([[1.,2.,-3.],[10.,-21.,34.,12.]],"erro")
+#tabela([[1.,2.,-3.],[10.,-21.,34.,12.]],"erro")
 
 #Aqui fica a parte de geração de trajetória mínimo jerk
 
@@ -118,7 +118,7 @@ af -> aceleração final
 T -> tempo para chegar ao ponto final
 """
 function minimumjerk(x0::T, v0::T, a0::T, xf::T, vf::T, af::T, tf::T) where T<:AbstractFloat
-    const t0 = 0
+    t0 = 0
     minimumjerk(x0,v0,a0,t0,xf,vf,af,tf)
 end
 
@@ -127,7 +127,7 @@ function minimumjerkf(x0::T, v0::T, a0::T, t0::T, xf::T, vf::T, af::T, tf::T) wh
 end
 
 function minimumjerkf(x0::T, v0::T, a0::T, xf::T, vf::T, af::T, tf::T) where T<:AbstractFloat
-    const t0 = 0.0
+    t0 = 0.0
     functionform(minimumjerk(x0,v0,a0,t0,xf,vf,af,tf))
 end
 

@@ -21,11 +21,11 @@ function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::Vector{Float64}) whe
         g = 9.81
         θ = SVector{2}(u[1:2])
         dθ = SVector{2}(u[3:4])
-        const cos1 = cos(θ[1])
-        const cos2 = cos(θ[2])
-        const sin1 = sin(θ[1])
-        const sin2 = sin(θ[2])
-        const cos12 = cos(θ[1]+θ[2])
+        cos1 = cos(θ[1])
+        cos2 = cos(θ[2])
+        sin1 = sin(θ[1])
+        sin2 = sin(θ[2])
+        cos12 = cos(θ[1]+θ[2])
 
         #Matriz de inércia
         m11 = m[1] * r[1]^2 + m[2]* (l[1]^2 + r[2]^2 + 2*l[1] * r[2] * cos2)+ I[1] + I[2]
@@ -74,11 +74,11 @@ function robot2dof(kp::T, kv::T, Ts::Y, t0::Y, tend::Y, xr::Vector{Z}, vr::Vecto
         g = 9.81
         θ = SVector{2}(u[1:2])
         dθ = SVector{2}(u[3:4])
-        const cos1 = cos(θ[1])
-        const cos2 = cos(θ[2])
-        const sin1 = sin(θ[1])
-        const sin2 = sin(θ[2])
-        const cos12 = cos(θ[1]+θ[2])
+        cos1 = cos(θ[1])
+        cos2 = cos(θ[2])
+        sin1 = sin(θ[1])
+        sin2 = sin(θ[2])
+        cos12 = cos(θ[1]+θ[2])
 
         #Matriz de inércia
         m11 = m[1] * r[1]^2 + m[2]* (l[1]^2 + r[2]^2 + 2*l[1] * r[2] * cos2)+ I[1] + I[2]
